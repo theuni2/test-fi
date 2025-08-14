@@ -8,6 +8,7 @@ import Fre from '../component/regenvest_home/fre'
 import Footer from '../component/thriveFi/footer'
 import Sponser from '../component/regenvest_home/sponser'
 import CommentSection from '../component/comment'
+import ResultsAndWinners from '../component/regenvest_home/result'
 
 export default function Page() {
   return (
@@ -16,7 +17,8 @@ export default function Page() {
 <Nav/>
 <Hero/>
 <Bout/>
-<Time/>
+<ResultsAndWinners/>
+{/* <Time/> */}
 <Downhero/>
 <Sponser/>
 <Fre/>

@@ -87,25 +87,26 @@ export default function HeroReGenVest() {
 
             <motion.div variants={item} className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow">
-                Deadline: June 20, 2025
+                Deadline: <b>Closed</b> (June 20, 2025)
+
               </span>
 
-              <a
+              {/* <a
                 href="/regenvest"
                 className="inline-flex items-center px-5 py-2 rounded-full text-sm bg-white text-black font-semibold hover:scale-105 transition transform"
                 aria-label="Learn more about ReGenVest"
               >
                 Learn More
-              </a>
+              </a> */}
 
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScrDPfVkT2_cd-gPOFke3YqXT1Tp8xfeDH2iQiuzkxuYMhf-g/viewform"
+                href="#result"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center px-5 py-2 rounded-full text-sm bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white font-semibold shadow hover:brightness-105 transition"
                 aria-label="Register for ReGenVest"
               >
-                Register
+               View Results
               </a>
             </motion.div>
           </motion.div>

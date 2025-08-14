@@ -42,7 +42,6 @@
 //   );
 // }
 
-
 "use client";
 
 import React from "react";
@@ -96,15 +95,24 @@ export default function Event() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
-            className="flex justify-center"
+            className="flex justify-center gap-4"
           >
             <a href="/regenvest">
               <button className="inline-flex text-white bg-gradient-to-r from-indigo-600 to-purple-600 border-0 py-3 px-8 focus:outline-none hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 rounded-xl text-lg shadow-lg hover:shadow-xl">
                 Learn More
               </button>
             </a>
+
+            <motion.a
+              href="/regenvest#result"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex text-white bg-gray-900 border-0 py-3 px-8 focus:outline-none hover:bg-gray-800 rounded-xl text-lg shadow-lg"
+            >
+              View Result
+            </motion.a>
           </motion.div>
-        </motion.div>
+        </motion.div> {/* ✅ Properly closed Left Content div */}
 
         {/* Right Image */}
         <motion.div
