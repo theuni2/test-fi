@@ -42,93 +42,551 @@
 //   );
 // }
 
-"use client";
+// "use client";
 
-import React from "react";
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// export default function Event() {
+//   return (
+//     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
+//       <div className="container mx-auto px-5 flex flex-col md:flex-row items-center">
+        
+//         {/* Left Content */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="lg:flex-grow md:w-1/2 lg:pr-16 md:pr-10 flex flex-col md:items-start md:text-left mb-12 md:mb-0 items-center text-center"
+//         >
+//           <motion.h3
+//             initial={{ opacity: 0, y: -10 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.2 }}
+//             className="text-sm uppercase tracking-wider text-purple-600 font-semibold"
+//           >
+//             Our First Event
+//           </motion.h3>
+
+//           <motion.h1
+//             initial={{ opacity: 0, y: -20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.4 }}
+//             className="sm:text-4xl text-3xl mb-4 font-extrabold leading-tight bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+//           >
+//             ReGenVest Essay Competition
+//           </motion.h1>
+
+//           <motion.p
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             transition={{ delay: 0.6 }}
+//             className="mb-8 leading-relaxed text-gray-700"
+//           >
+//             ThriveFi is proud to announce the launch of the ReGenVest Challenge
+//             in India, an initiative designed to engage senior students in
+//             critical financial thinking. The challenge invites senior school
+//             students to write essays on pressing financial topics, encouraging
+//             them to explore real-world problems and propose innovative
+//             solutions.
+//           </motion.p>
+
+//           <motion.div
+//             initial={{ opacity: 0, scale: 0.9 }}
+//             whileInView={{ opacity: 1, scale: 1 }}
+//             transition={{ delay: 0.8 }}
+//             className="flex justify-center gap-4"
+//           >
+//             <a href="/regenvest">
+//               <button className="inline-flex text-white bg-gradient-to-r from-indigo-600 to-purple-600 border-0 py-3 px-8 focus:outline-none hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 rounded-xl text-lg shadow-lg hover:shadow-xl">
+//                 Learn More
+//               </button>
+//             </a>
+
+//             <motion.a
+//               href="/regenvest#result"
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.97 }}
+//               className="inline-flex text-white bg-gray-900 border-0 py-3 px-8 focus:outline-none hover:bg-gray-800 rounded-xl text-lg shadow-lg"
+//             >
+//               View Result
+//             </motion.a>
+//           </motion.div>
+//         </motion.div> {/* ✅ Properly closed Left Content div */}
+
+//         {/* Right Image */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+//         >
+//           <motion.img
+//             whileHover={{ scale: 1.05 }}
+//             transition={{ duration: 0.3 }}
+//             className="object-cover object-center rounded-2xl shadow-lg"
+//             alt="ReGenVest"
+//             src="/images/regenvestimg.jpeg"
+//           />
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+// "use client";
+
+// import { useEffect, useState, useRef } from "react";
+
+// export default function Event() {
+//   const [count, setCount] = useState(0);
+//   const sectionRef = useRef(null);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           // Animate counter
+//           let start = 0;
+//           const end = 200; // Final number
+//           const duration = 2000; // 2s
+//           const stepTime = Math.abs(Math.floor(duration / end));
+
+//           const timer = setInterval(() => {
+//             start += 1;
+//             setCount(start);
+//             if (start === end) clearInterval(timer);
+//           }, stepTime);
+//         }
+//       },
+//       { threshold: 0.5 }
+//     );
+
+//     if (sectionRef.current) observer.observe(sectionRef.current);
+//     return () => observer.disconnect();
+//   }, []);
+
+//   return (
+//     <section
+//       ref={sectionRef}
+//       className="relative w-full h-screen flex flex-col items-center justify-center bg-black overflow-hidden"
+//     >
+//       {/* Background Video */}
+//       <video
+//         className="absolute top-0 left-0 w-full h-full object-cover"
+//         src="/yourvideo.mp4" // put video in public/
+//         autoPlay
+//         muted
+//         loop
+//         playsInline
+//       />
+
+//       {/* Dark overlay */}
+//       <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+//       {/* Floating Blob Elements */}
+//       <img
+//         src="/blob.png" // replace with your uploaded blob image
+//         alt="decor"
+//         className="absolute top-10 left-10 w-32 animate-float"
+//       />
+//       <img
+//         src="/blob.png"
+//         alt="decor"
+//         className="absolute bottom-20 right-16 w-24 animate-float-delayed"
+//       />
+//       <img
+//         src="/blob.png"
+//         alt="decor"
+//         className="absolute top-1/3 right-1/4 w-40 animate-float-slow"
+//       />
+
+//       {/* Number Counter */}
+//       <div className="relative z-10 text-white text-6xl font-bold">
+//         {count}
+//       </div>
+
+//       {/* Extra Styles for floating animation */}
+//       <style jsx>{`
+//         @keyframes float {
+//           0% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//           50% {
+//             transform: translateY(-20px) rotate(10deg);
+//           }
+//           100% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//         }
+//         .animate-float {
+//           animation: float 6s ease-in-out infinite;
+//         }
+//         .animate-float-delayed {
+//           animation: float 7s ease-in-out infinite;
+//           animation-delay: 2s;
+//         }
+//         .animate-float-slow {
+//           animation: float 10s ease-in-out infinite;
+//         }
+//       `}</style>
+//     </section>
+//   );
+// }
+
+
+// "use client";
+
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// export default function Event() {
+//   return (
+//     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
+//       {/* 🔹 Floating Background Elements */}
+//   <motion.img
+//   src="/blob.png"
+//   alt="decor"
+//   className="absolute top-10 left-10 w-32 opacity-70 animate-float z-0"
+// />
+// <motion.img
+//   src="/blob.png"
+//   alt="decor"
+//   className="absolute bottom-10 right-10 w-40 opacity-60 animate-float-delayed z-0"
+// />
+// <motion.img
+//   src="/blob.png"
+//   alt="decor"
+//   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 opacity-50 animate-float-slow z-0"
+// />
+
+
+
+//       <div className="container mx-auto px-5 flex flex-col md:flex-row items-center relative z-10">
+//         {/* Left Content */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="lg:flex-grow md:w-1/2 lg:pr-16 md:pr-10 flex flex-col md:items-start md:text-left mb-12 md:mb-0 items-center text-center"
+//         >
+//           <motion.h3
+//             initial={{ opacity: 0, y: -10 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.2 }}
+//             className="text-sm uppercase tracking-wider text-purple-600 font-semibold"
+//           >
+//             Our First Event
+//           </motion.h3>
+
+//           <motion.h1
+//             initial={{ opacity: 0, y: -20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.4 }}
+//             className="sm:text-4xl text-3xl mb-4 font-extrabold leading-tight bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+//           >
+//             ReGenVest Essay Competition
+//           </motion.h1>
+
+//           <motion.p
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             transition={{ delay: 0.6 }}
+//             className="mb-8 leading-relaxed text-gray-700"
+//           >
+//             ThriveFi is proud to announce the launch of the ReGenVest Challenge
+//             in India, an initiative designed to engage senior students in
+//             critical financial thinking. The challenge invites senior school
+//             students to write essays on pressing financial topics, encouraging
+//             them to explore real-world problems and propose innovative
+//             solutions.
+//           </motion.p>
+
+//           <motion.div
+//             initial={{ opacity: 0, scale: 0.9 }}
+//             whileInView={{ opacity: 1, scale: 1 }}
+//             transition={{ delay: 0.8 }}
+//             className="flex justify-center gap-4"
+//           >
+//             <a href="/regenvest">
+//               <button className="inline-flex text-white bg-gradient-to-r from-indigo-600 to-purple-600 border-0 py-3 px-8 focus:outline-none hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 rounded-xl text-lg shadow-lg hover:shadow-xl">
+//                 Learn More
+//               </button>
+//             </a>
+
+//             <motion.a
+//               href="/regenvest#result"
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.97 }}
+//               className="inline-flex text-white bg-gray-900 border-0 py-3 px-8 focus:outline-none hover:bg-gray-800 rounded-xl text-lg shadow-lg"
+//             >
+//               View Result
+//             </motion.a>
+//           </motion.div>
+//         </motion.div>
+
+//         {/* Right Image */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+//         >
+//           <motion.img
+//             whileHover={{ scale: 1.05 }}
+//             transition={{ duration: 0.3 }}
+//             className="object-cover object-center rounded-2xl shadow-lg"
+//             alt="ReGenVest"
+//             src="/images/regenvestimg.jpeg"
+//           />
+//         </motion.div>
+//       </div>
+
+//       {/* Floating Animation Styles */}
+//       <style jsx>{`
+//         @keyframes float {
+//           0% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//           50% {
+//             transform: translateY(-20px) rotate(10deg);
+//           }
+//           100% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//         }
+//         .animate-float {
+//           animation: float 6s ease-in-out infinite;
+//         }
+//         .animate-float-delayed {
+//           animation: float 8s ease-in-out infinite;
+//           animation-delay: 2s;
+//         }
+//         .animate-float-slow {
+//           animation: float 10s ease-in-out infinite;
+//         }
+//       `}</style>
+//     </section>
+//   );
+// }
+
+// "use client";
+
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// export default function Event() {
+//   return (
+//     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
+//       {/* 🔹 Floating Background Elements */}
+//       <motion.img
+//         src="/blob.png"
+//         alt="decor"
+//         className="absolute top-10 left-10 w-32 opacity-70 animate-float z-0"
+//       />
+//       <motion.img
+//         src="/blob.png"
+//         alt="decor"
+//         className="absolute bottom-10 right-10 w-40 opacity-60 animate-float-delayed z-0"
+//       />
+//       <motion.img
+//         src="/blob.png"
+//         alt="decor"
+//         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 opacity-50 animate-float-slow z-0"
+//       />
+
+//       <div className="container mx-auto px-5 flex flex-col md:flex-row items-center relative z-10">
+//         {/* Left Content */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="lg:flex-grow md:w-1/2 lg:pr-16 md:pr-10 flex flex-col md:items-start md:text-left mb-12 md:mb-0 items-center text-center"
+//         >
+//           <motion.h3
+//             initial={{ opacity: 0, y: -10 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.2 }}
+//             className="text-sm uppercase tracking-wider text-purple-600 font-semibold"
+//           >
+//             Our First Event
+//           </motion.h3>
+
+//           {/* 🔹 Updated Heading Font */}
+//           <motion.h1
+//             initial={{ opacity: 0, y: -20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.4 }}
+//             className="sm:text-6xl text-4xl mb-6 font-bold leading-tight tracking-tight text-gray-900 font-[Oswald]"
+//           >
+//             INVESTMENT FOR THE <span className="italic">FUTURE</span>
+//           </motion.h1>
+
+//           <motion.p
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             transition={{ delay: 0.6 }}
+//             className="mb-8 leading-relaxed text-gray-700"
+//           >
+//             ThriveFi is proud to announce the launch of the ReGenVest Challenge
+//             in India, an initiative designed to engage senior students in
+//             critical financial thinking. The challenge invites senior school
+//             students to write essays on pressing financial topics, encouraging
+//             them to explore real-world problems and propose innovative
+//             solutions.
+//           </motion.p>
+
+//           <motion.div
+//             initial={{ opacity: 0, scale: 0.9 }}
+//             whileInView={{ opacity: 1, scale: 1 }}
+//             transition={{ delay: 0.8 }}
+//             className="flex justify-center gap-4"
+//           >
+//             <a href="/regenvest">
+//               <button className="inline-flex text-white bg-gradient-to-r from-indigo-600 to-purple-600 border-0 py-3 px-8 focus:outline-none hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 rounded-xl text-lg shadow-lg hover:shadow-xl">
+//                 Learn More
+//               </button>
+//             </a>
+
+//             <motion.a
+//               href="/regenvest#result"
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.97 }}
+//               className="inline-flex text-white bg-gray-900 border-0 py-3 px-8 focus:outline-none hover:bg-gray-800 rounded-xl text-lg shadow-lg"
+//             >
+//               View Result
+//             </motion.a>
+//           </motion.div>
+//         </motion.div>
+
+//         {/* Right Image with GIF overlay */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="relative lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+//         >
+//           <motion.img
+//             whileHover={{ scale: 1.05 }}
+//             transition={{ duration: 0.3 }}
+//             className="object-cover object-center rounded-2xl shadow-lg"
+//             alt="ReGenVest"
+//             src="/images/regenvestimg.jpeg"
+//           />
+
+//           {/* 🔹 Finance GIF at bottom-left over border */}
+//           <motion.img
+//             src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlxZG9nb3Yyd2Zwbzduc3NtdGlseXVhZTBrb3dteHFvcHVrMXB0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LV7b0I8PclupfEcXVZ/giphy.gif" // replace with your GIF path
+//             alt="Finance GIF"
+//             className="absolute bottom-4 left-4 w-24 h-24 sm:w-28 sm:h-28 rounded-lg shadow-lg border-2 border-white"
+//             initial={{ opacity: 0, scale: 0.8 }}
+//             animate={{ opacity: 1, scale: 1 }}
+//             transition={{ delay: 1, duration: 0.8 }}
+//           />
+//         </motion.div>
+//       </div>
+
+//       {/* Floating Animation Styles */}
+//       <style jsx>{`
+//         @keyframes float {
+//           0% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//           50% {
+//             transform: translateY(-20px) rotate(10deg);
+//           }
+//           100% {
+//             transform: translateY(0px) rotate(0deg);
+//           }
+//         }
+//         .animate-float {
+//           animation: float 6s ease-in-out infinite;
+//         }
+//         .animate-float-delayed {
+//           animation: float 8s ease-in-out infinite;
+//           animation-delay: 2s;
+//         }
+//         .animate-float-slow {
+//           animation: float 10s ease-in-out infinite;
+//         }
+//       `}</style>
+//     </section>
+//   );
+// }
+
+"use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Event() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
-      <div className="container mx-auto px-5 flex flex-col md:flex-row items-center">
+    <section className="flex flex-col md:flex-row items-stretch justify-between w-full bg-white px-6 md:px-12 py-16">
+      {/* Left Side */}
+      <div className="flex flex-col justify-start w-full md:w-1/2">
         
-        {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="lg:flex-grow md:w-1/2 lg:pr-16 md:pr-10 flex flex-col md:items-start md:text-left mb-12 md:mb-0 items-center text-center"
-        >
-          <motion.h3
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-sm uppercase tracking-wider text-purple-600 font-semibold"
-          >
-            Our First Event
-          </motion.h3>
+        {/* Smooth Card Box */}
+        <div className="relative bg-[#e05fcf81] rounded-[28px] p-8 md:p-10 shadow-md max-w-lg">
+          {/* Icon + Text */}
+          <div className="flex items-center space-x-3">
+           
+            <span className="uppercase text-xs md:text-sm font-bold text-gray-800 tracking-wide">
+              For First Event
+            </span>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="sm:text-4xl text-3xl mb-4 font-extrabold leading-tight bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
-          >
-            ReGenVest Essay Competition
-          </motion.h1>
+          {/* Heading */}
+          <h2 className="mt-3 text-3xl md:text-4xl font-extrabold font-[oswald] text-gray-900 leading-snug">
+           ReGenVest Essay 
+            <span className="relative text-[#ff5722]">
+              
+              {/* underline wave */}
+              <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-[url('/icons/wave.svg')] bg-repeat-x"></span>
+            </span>{" "}
+            <br /> Competition
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mb-8 leading-relaxed text-gray-700"
-          >
-            ThriveFi is proud to announce the launch of the ReGenVest Challenge
-            in India, an initiative designed to engage senior students in
-            critical financial thinking. The challenge invites senior school
-            students to write essays on pressing financial topics, encouraging
-            them to explore real-world problems and propose innovative
-            solutions.
-          </motion.p>
-
+          {/* Plane Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8 }}
-            className="flex justify-center gap-4"
+            initial={{ x: -30, y: 20, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="absolute bottom-[-35px] right-[-70px] w-48 md:w-56"
           >
-            <a href="/regenvest">
-              <button className="inline-flex text-white bg-gradient-to-r from-indigo-600 to-purple-600 border-0 py-3 px-8 focus:outline-none hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 rounded-xl text-lg shadow-lg hover:shadow-xl">
-                Learn More
-              </button>
-            </a>
-
-            <motion.a
-              href="/regenvest#result"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex text-white bg-gray-900 border-0 py-3 px-8 focus:outline-none hover:bg-gray-800 rounded-xl text-lg shadow-lg"
-            >
-              View Result
-            </motion.a>
+            <Image
+              src="/images/bull.png"
+              alt="Plane"
+              width={220}
+              height={220}
+              className="object-contain"
+            />
           </motion.div>
-        </motion.div> {/* ✅ Properly closed Left Content div */}
+        </div>
 
-        {/* Right Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
-        >
-          <motion.img
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="object-cover object-center rounded-2xl shadow-lg"
-            alt="ReGenVest"
-            src="/images/regenvestimg.jpeg"
-          />
-        </motion.div>
+        {/* Description */}
+        <p className="mt-12 text-base font-bold w-1/2 md:text-base text-gray-700 leading-relaxed max-w-md">
+          ThriveFi proudly launches the ReGenVest Challenge in India, inviting senior school students to write essays on key financial issues, fostering critical thinking and innovative problem-solving.
+        </p>
+
+        {/* Work Progress Button */}
+        <button className="mt-6 text-sm md:text-base font-semibold tracking-wide text-black flex items-center hover:ml-1 transition-all">
+          Know More <span className="ml-2">➝</span>
+        </button>
+      </div>
+
+      {/* Right Image */}
+      <div className="relative w-full md:w-1/2 mt-12 md:mt-0 md:pl-12">
+        <Image
+          src="/images/regenvestimg.jpeg"
+          alt="Office Team"
+          width={800}
+          height={600}
+          className="w-full h-full object-cover rounded-[28px]"
+        />
+        {/* Bottom Button */}
+        <button className="absolute bottom-6 right-8 bg-transparent font-semibold text-white p-3 rounded-xl bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-sm md:text-base flex items-center hover:mr-1 transition-all">
+          View Result <span className="ml-2">➝</span>
+        </button>
       </div>
     </section>
   );
