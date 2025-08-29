@@ -643,7 +643,7 @@ export default function Event() {
 
         {/* Description */}
         <p className="mt-10 text-sm sm:text-base font-medium text-gray-700 leading-relaxed max-w-full md:max-w-md">
-          ThriveFi proudly launches the ReGenVest Challenge in India, inviting senior school students to write essays on key financial issues, fostering critical thinking and innovative problem-solving.
+          ThriveFi proudly launches the ReGenVest Challenge in India, inviting senior school students to write essays on key financial issues, fostering critical thinking and innovative problem solving.
         </p>
 
         {/* Work Progress Button */}
