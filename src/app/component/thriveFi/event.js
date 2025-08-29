@@ -515,76 +515,155 @@
 //   );
 // }
 
+// "use client";
+// import Image from "next/image";
+// import { motion } from "framer-motion";
+
+// export default function Event() {
+//   return (
+//     <section className="flex flex-col md:flex-row items-stretch justify-between w-full bg-white px-6 md:px-12 py-16">
+//       {/* Left Side */}
+//       <div className="flex flex-col justify-start w-full md:w-1/2">
+        
+//         {/* Smooth Card Box */}
+//         <div className="relative bg-[#e05fcf81] rounded-[28px] p-8 md:p-10 shadow-md max-w-lg">
+//           {/* Icon + Text */}
+//           <div className="flex items-center space-x-3">
+           
+//             <span className="uppercase text-xs md:text-sm font-bold text-gray-800 tracking-wide">
+//              Our First Event
+//             </span>
+//           </div>
+
+//           {/* Heading */}
+//           <h2 className="mt-3 text-3xl md:text-4xl font-extrabold font-[oswald] text-gray-900 leading-snug">
+//            ReGenVest Essay 
+//             <span className="relative text-[#ff5722]">
+              
+//               {/* underline wave */}
+//               <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-[url('/icons/wave.svg')] bg-repeat-x"></span>
+//             </span>{" "}
+//             <br /> Competition
+//           </h2>
+
+//           {/* Plane Image */}
+//           <motion.div
+//             initial={{ x: -30, y: 20, opacity: 0 }}
+//             animate={{ x: 0, y: 0, opacity: 1 }}
+//             transition={{ duration: 0.9, ease: "easeOut" }}
+//             className="absolute bottom-[-35px] right-[-70px] w-48 md:w-56"
+//           >
+//             <Image
+//               src="/images/bull.png"
+//               alt="Plane"
+//               width={220}
+//               height={220}
+//               className="object-contain"
+//             />
+//           </motion.div>
+//         </div>
+
+//         {/* Description */}
+//         <p className="mt-12 text-base font-bold w-1/2 md:text-base text-gray-700 leading-relaxed max-w-md">
+//           ThriveFi proudly launches the ReGenVest Challenge in India, inviting senior school students to write essays on key financial issues, fostering critical thinking and innovative problem-solving.
+//         </p>
+
+//         {/* Work Progress Button */}
+//         <button className="mt-6 text-sm md:text-base font-semibold tracking-wide text-black flex items-center hover:ml-1 transition-all">
+//           Know More <span className="ml-2">➝</span>
+//         </button>
+//       </div>
+
+//       {/* Right Image */}
+//       <div className="relative w-full md:w-1/2 mt-12 md:mt-0 md:pl-12">
+//         <Image
+//           src="/images/regenvestimg.jpeg"
+//           alt="Office Team"
+//           width={800}
+//           height={600}
+//           className="w-full h-full object-cover rounded-[28px]"
+//         />
+//         {/* Bottom Button */}
+//         <button className="absolute bottom-6 right-8 bg-transparent font-semibold text-white p-3 rounded-xl bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-sm md:text-base flex items-center hover:mr-1 transition-all">
+//           View Result <span className="ml-2">➝</span>
+//         </button>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Event() {
   return (
-    <section className="flex flex-col md:flex-row items-stretch justify-between w-full bg-white px-6 md:px-12 py-16">
+    <section className="flex flex-col md:flex-row items-stretch justify-between w-full bg-white px-4 sm:px-6 md:px-12 py-12 md:py-16">
+      
       {/* Left Side */}
       <div className="flex flex-col justify-start w-full md:w-1/2">
         
         {/* Smooth Card Box */}
-        <div className="relative bg-[#e05fcf81] rounded-[28px] p-8 md:p-10 shadow-md max-w-lg">
+        <div className="relative bg-[#e05fcf81] rounded-[24px] p-6 sm:p-8 md:p-10 shadow-md max-w-full md:max-w-lg">
+          
           {/* Icon + Text */}
-          <div className="flex items-center space-x-3">
-           
-            <span className="uppercase text-xs md:text-sm font-bold text-gray-800 tracking-wide">
-              For First Event
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <span className="uppercase text-xs sm:text-sm font-bold text-gray-800 tracking-wide">
+              Our First Event
             </span>
           </div>
 
           {/* Heading */}
-          <h2 className="mt-3 text-3xl md:text-4xl font-extrabold font-[oswald] text-gray-900 leading-snug">
-           ReGenVest Essay 
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold font-[oswald] text-gray-900 leading-snug">
+            ReGenVest Essay{" "}
             <span className="relative text-[#ff5722]">
-              
               {/* underline wave */}
               <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-[url('/icons/wave.svg')] bg-repeat-x"></span>
             </span>{" "}
             <br /> Competition
           </h2>
 
-          {/* Plane Image */}
+          {/* Bull Image */}
           <motion.div
             initial={{ x: -30, y: 20, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="absolute bottom-[-35px] right-[-70px] w-48 md:w-56"
+            className="absolute bottom-[-30px] right-[-40px] w-32 sm:w-40 md:w-56 overflow-hidden"
           >
             <Image
               src="/images/bull.png"
-              alt="Plane"
+              alt="Bull Icon"
               width={220}
               height={220}
-              className="object-contain"
+              className="object-contain overflow-hidden"
             />
           </motion.div>
         </div>
 
         {/* Description */}
-        <p className="mt-12 text-base font-bold w-1/2 md:text-base text-gray-700 leading-relaxed max-w-md">
+        <p className="mt-10 text-sm sm:text-base font-medium text-gray-700 leading-relaxed max-w-full md:max-w-md">
           ThriveFi proudly launches the ReGenVest Challenge in India, inviting senior school students to write essays on key financial issues, fostering critical thinking and innovative problem-solving.
         </p>
 
         {/* Work Progress Button */}
-        <button className="mt-6 text-sm md:text-base font-semibold tracking-wide text-black flex items-center hover:ml-1 transition-all">
+        <button className="mt-6 text-sm sm:text-base font-semibold tracking-wide text-black flex items-center hover:ml-1 transition-all">
           Know More <span className="ml-2">➝</span>
         </button>
       </div>
 
       {/* Right Image */}
-      <div className="relative w-full md:w-1/2 mt-12 md:mt-0 md:pl-12">
+      <div className="relative w-full md:w-1/2 mt-10 md:mt-0 md:pl-12">
         <Image
           src="/images/regenvestimg.jpeg"
-          alt="Office Team"
+          alt="Event Banner"
           width={800}
           height={600}
-          className="w-full h-full object-cover rounded-[28px]"
+          className="w-full h-auto object-cover rounded-[24px]"
         />
+        
         {/* Bottom Button */}
-        <button className="absolute bottom-6 right-8 bg-transparent font-semibold text-white p-3 rounded-xl bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-sm md:text-base flex items-center hover:mr-1 transition-all">
+        <button className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white font-semibold px-4 py-2 sm:px-5 sm:py-3 rounded-xl text-xs sm:text-sm md:text-base flex items-center hover:mr-1 transition-all">
           View Result <span className="ml-2">➝</span>
         </button>
       </div>

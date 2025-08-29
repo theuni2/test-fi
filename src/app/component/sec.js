@@ -800,7 +800,7 @@ export default function Sec1() {
         <h1 className="sm:text-6xl text-4xl mb-6 font-bold leading-tight tracking-tight text-gray-900 font-[Oswald]">
           Empowering Students <br /> Through Financial Education
         </h1>
-        <p className="text-gray-600 mt-6 text-base font-bold max-w-md">
+        <p className="text-gray-600 mt-6 text-base font-medium max-w-md">
           {/* At the core of ThriveFi are our guiding principles—the <strong>3 Cs</strong>:
           <span className="text-purple-600 font-bold "> Conference</span>, 
           <span className="text-purple-600 font-bold"> Competition</span>, and 
