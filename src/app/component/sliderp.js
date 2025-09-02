@@ -422,122 +422,628 @@
 // }
 
 
+// "use client";
+// import { motion, useScroll, useTransform } from "framer-motion";
+// import { useRef } from "react";
+
+// export default function ThreeCsParallax() {
+//   const containerRef = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//     offset: ["start start", "end end"],
+//   });
+
+//   // Card 1
+//   const card1Y = useTransform(scrollYProgress, [0, 0.3], ["0%", "-10%"]);
+//   const card1Opacity = useTransform(scrollYProgress, [0, 0.001], [1, 1]);
+
+//   // Card 2
+//   const card2Y = useTransform(scrollYProgress, [0.18, 0.38], ["110%", "0%"]);
+//   const card2Opacity = useTransform(scrollYProgress, [0.18, 0.28], [0, 1]);
+
+//   // Card 3
+//   const card3Y = useTransform(scrollYProgress, [0.5, 0.7], ["110%", "0%"]);
+//   const card3Opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
+
+//   return (
+//     <div ref={containerRef} className="relative h-[300vh] bg-white">
+//       {/* Sticky wrapper */}
+//       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+
+//         {/* Card 1 */}
+//         <motion.div
+//           style={{ y: card1Y, opacity: card1Opacity }}
+//           className="absolute w-11/12 max-w-6xl bg-[#78cc84] text-black rounded-2xl shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between will-change-transform"
+//         >
+//           <div className="max-w-lg mb-6 md:mb-0">
+//             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+//               For <span className="text-orange-500">Students</span>
+//             </h2>
+//             <p className="text-white/90 leading-relaxed mb-6 text-sm sm:text-base">
+//               Participate in our events to learn and grow your financial knowledge.
+//               Gain practical insights and skills that will help you make smarter financial decisions.
+//             </p>
+//           </div>
+
+//           <div className="w-full md:w-[280px] h-64 md:h-[500px] flex items-center justify-center relative rounded-2xl overflow-hidden">
+//             <video
+//               src="/images/vid2.mp4"
+//               autoPlay
+//               loop
+//               muted
+//               playsInline
+//               className="w-full h-full object-cover"
+//               poster="/images/vid2-poster.jpg"
+//             />
+//           </div>
+//         </motion.div>
+
+//         {/* Card 2 */}
+//         <motion.div
+//           style={{ y: card2Y, opacity: card2Opacity }}
+//           className="absolute w-11/12 max-w-5xl bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between will-change-transform"
+//         >
+//           <div className="max-w-md mb-6 md:mb-0">
+//             <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+//               Partnership
+//             </span>
+//             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//               For Schools & Communities
+//             </h2>
+//             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//               Partner with us to bring financial education programs to your students. 
+//               Together, we can create meaningful opportunities for lifelong learning.
+//             </p>
+//           </div>
+
+//           <div className="w-full md:w-[300px] h-56 md:h-[300px] flex items-center justify-center overflow-hidden relative">
+//             <video
+//               className="w-full h-full object-cover"
+//               src="/images/vid1.mp4"
+//               autoPlay
+//               muted
+//               loop
+//               playsInline
+//               poster="/images/vid1-poster.jpg"
+//             />
+//           </div>
+//         </motion.div>
+
+//         {/* Card 3 */}
+//         <motion.div
+//           style={{ y: card3Y, opacity: card3Opacity }}
+//           className="absolute w-11/12 max-w-5xl bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between will-change-transform"
+//         >
+//           <div className="max-w-md mb-6 md:mb-0">
+//             <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+//               Support
+//             </span>
+//             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//               For Sponsors & Speakers
+//             </h2>
+//             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//               Support and contribute to our mission of promoting financial literacy. 
+//               Share your expertise, inspire others, and help us create a lasting impact.
+//             </p>
+//           </div>
+
+//           <div className="w-full md:w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg overflow-hidden">
+//             <iframe
+//               src="https://my.spline.design/colorbox3copy-g9oSODF3wwrLXjlYumN2rkbI/"
+//               frameBorder="0"
+//               width="100%"
+//               height="100%"
+//               className="rounded-full"
+//             />
+//           </div>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+// "use client";
+// import { motion } from "framer-motion";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination, Navigation } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+// export default function ThreeCsSlider() {
+//   return (
+//     <div className="relative min-h-screen bg-white flex items-center justify-center px-4">
+//       <Swiper
+//         modules={[Pagination, Navigation]}
+//         spaceBetween={30}
+//         slidesPerView={1}
+//         pagination={{ clickable: true }}
+//         navigation
+//         className="w-full max-w-6xl"
+//       >
+//         {/* Card 1 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-[#78cc84] text-black rounded-2xl shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between"
+//           >
+//             <div className="max-w-lg mb-6 md:mb-0">
+//               <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+//                 For <span className="text-orange-500">Students</span>
+//               </h2>
+//               <p className="text-white/90 leading-relaxed mb-6 text-sm sm:text-base">
+//                 Participate in our events to learn and grow your financial knowledge.
+//                 Gain practical insights and skills that will help you make smarter financial decisions.
+//               </p>
+//             </div>
+//             <div className="w-full md:w-[280px] h-64 md:h-[500px] flex items-center justify-center relative rounded-2xl overflow-hidden">
+//               <video
+//                 src="/images/vid2.mp4"
+//                 autoPlay
+//                 loop
+//                 muted
+//                 playsInline
+//                 className="w-full h-full object-cover"
+//                 poster="/images/vid2-poster.jpg"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+
+//         {/* Card 2 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between"
+//           >
+//             <div className="max-w-md mb-6 md:mb-0">
+//               <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+//                 Partnership
+//               </span>
+//               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//                 For Schools & Communities
+//               </h2>
+//               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//                 Partner with us to bring financial education programs to your students.
+//                 Together, we can create meaningful opportunities for lifelong learning.
+//               </p>
+//             </div>
+//             <div className="w-full md:w-[300px] h-56 md:h-[300px] flex items-center justify-center overflow-hidden relative">
+//               <video
+//                 className="w-full h-full object-cover"
+//                 src="/images/vid1.mp4"
+//                 autoPlay
+//                 muted
+//                 loop
+//                 playsInline
+//                 poster="/images/vid1-poster.jpg"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+
+//         {/* Card 3 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between"
+//           >
+//             <div className="max-w-md mb-6 md:mb-0">
+//               <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+//                 Support
+//               </span>
+//               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//                 For Sponsors & Speakers
+//               </h2>
+//               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//                 Support and contribute to our mission of promoting financial literacy.
+//                 Share your expertise, inspire others, and help us create a lasting impact.
+//               </p>
+//             </div>
+//             <div className="w-full md:w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg overflow-hidden">
+//               <iframe
+//                 src="https://my.spline.design/colorbox3copy-g9oSODF3wwrLXjlYumN2rkbI/"
+//                 frameBorder="0"
+//                 width="100%"
+//                 height="100%"
+//                 className="rounded-full"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+//       </Swiper>
+//     </div>
+//   );
+// // }
+
+// "use client";
+// import { motion } from "framer-motion";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination, Navigation } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+// export default function ThreeCsSlider() {
+//   return (
+//     // <div className="relative min-h-screen bg-white flex items-center justify-center px-4">
+//     //   <Swiper
+//     //     modules={[Pagination, Navigation]}
+//     //     spaceBetween={30}
+//     //     slidesPerView={1}
+//     //     pagination={{ clickable: true }}
+//     //     navigation
+//     //     className="w-full max-w-6xl"
+//     //   >
+//     //     {/* Card 1 */}
+//     //     <SwiperSlide>
+//     //       <motion.div
+//     //         initial={{ opacity: 0, y: 50 }}
+//     //         animate={{ opacity: 1, y: 0 }}
+//     //         transition={{ duration: 0.6 }}
+//     //         className="w-full bg-[#78cc84] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-stretch justify-between gap-6"
+//     //       >
+//     //         {/* Text */}
+//     //         <div className="flex-1 max-w-lg">
+//     //           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+//     //             For <span className="text-orange-500">Students</span>
+//     //           </h2>
+//     //           <p className="text-white/90 leading-relaxed text-sm sm:text-base">
+//     //             Participate in our events to learn and grow your financial knowledge.
+//     //             Gain practical insights and skills that will help you make smarter financial decisions.
+//     //           </p>
+//     //         </div>
+
+//     //         {/* Video */}
+//     //         <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//     //           <video
+//     //             src="/images/vid2.mp4"
+//     //             autoPlay
+//     //             loop
+//     //             muted
+//     //             playsInline
+//     //             className="w-full h-full object-cover"
+//     //           />
+//     //         </div>
+//     //       </motion.div>
+//     //     </SwiperSlide>
+
+//     //     {/* Card 2 */}
+//     //     <SwiperSlide>
+//     //       <motion.div
+//     //         initial={{ opacity: 0, y: 50 }}
+//     //         animate={{ opacity: 1, y: 0 }}
+//     //         transition={{ duration: 0.6 }}
+//     //         className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-stretch justify-between gap-6"
+//     //       >
+//     //         {/* Text */}
+//     //         <div className="flex-1 max-w-md">
+//     //           <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+//     //             Partnership
+//     //           </span>
+//     //           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//     //             For Schools & Communities
+//     //           </h2>
+//     //           <p className="text-gray-700 leading-relaxed text-sm my-auto sm:text-base">
+//     //             Partner with us to bring financial education programs to your students.
+//     //             Together, we can create meaningful opportunities for lifelong learning.
+//     //           </p>
+//     //         </div>
+
+//     //         {/* Video */}
+//     //         <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//     //           <video
+//     //             className="w-full h-full object-cover"
+//     //             src="/images/vid1.mp4"
+//     //             autoPlay
+//     //             muted
+//     //             loop
+//     //             playsInline
+//     //           />
+//     //         </div>
+//     //       </motion.div>
+//     //     </SwiperSlide>
+
+//     //     {/* Card 3 */}
+//     //     <SwiperSlide>
+//     //       <motion.div
+//     //         initial={{ opacity: 0, y: 50 }}
+//     //         animate={{ opacity: 1, y: 0 }}
+//     //         transition={{ duration: 0.6 }}
+//     //         className="w-full bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-stretch justify-between gap-6"
+//     //       >
+//     //         {/* Text */}
+//     //         <div className="flex-1 max-w-md">
+//     //           <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+//     //             Support
+//     //           </span>
+//     //           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//     //             For Sponsors & Speakers
+//     //           </h2>
+//     //           <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//     //             Support and contribute to our mission of promoting financial literacy.
+//     //             Share your expertise, inspire others, and help us create a lasting impact.
+//     //           </p>
+//     //         </div>
+
+//     //         {/* Video */}
+//     //         <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//     //           <video
+//     //             className="w-full h-full object-cover"
+//     //             src="/images/vid3.mp4"
+//     //             autoPlay
+//     //             muted
+//     //             loop
+//     //             playsInline
+//     //           />
+//     //         </div>
+//     //       </motion.div>
+//     //     </SwiperSlide>
+//     //   </Swiper>
+//     // </div>
+// <div className="relative min-h-screen bg-white flex items-center justify-center px-4">
+//   <Swiper
+//     modules={[Pagination, Navigation]}
+//     spaceBetween={30}
+//     slidesPerView={1}
+//     pagination={{ clickable: true }}
+//     navigation
+//     className="w-full max-w-6xl"
+//   >
+//     {/* Card 1 */}
+//     <SwiperSlide>
+//       <motion.div
+//         initial={{ opacity: 0, y: 50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//         className="w-full bg-[#78cc84] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                    p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//       >
+//         {/* Text */}
+//         <div className="flex-1 max-w-lg flex flex-col justify-center">
+//           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+//             For <span className="text-orange-500">Students</span>
+//           </h2>
+//           <p className="text-white/90 leading-relaxed text-sm sm:text-base">
+//             Participate in our events to learn and grow your financial knowledge.
+//             Gain practical insights and skills that will help you make smarter financial decisions.
+//           </p>
+//         </div>
+
+//         {/* Video */}
+//         <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//           <video
+//             src="/images/vid2.mp4"
+//             autoPlay
+//             loop
+//             muted
+//             playsInline
+//             className="w-full h-full object-cover"
+//           />
+//         </div>
+//       </motion.div>
+//     </SwiperSlide>
+
+//     {/* Card 2 */}
+//     <SwiperSlide>
+//       <motion.div
+//         initial={{ opacity: 0, y: 50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//         className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                    p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//       >
+//         {/* Text */}
+//         <div className="flex-1 max-w-md flex flex-col justify-center">
+//           <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+//             Partnership
+//           </span>
+//           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//             For Schools & Communities
+//           </h2>
+//           <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//             Partner with us to bring financial education programs to your students.
+//             Together, we can create meaningful opportunities for lifelong learning.
+//           </p>
+//         </div>
+
+//         {/* Video */}
+//         <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//           <video
+//             className="w-full h-full object-cover"
+//             src="/images/vid1.mp4"
+//             autoPlay
+//             muted
+//             loop
+//             playsInline
+//           />
+//         </div>
+//       </motion.div>
+//     </SwiperSlide>
+
+//     {/* Card 3 */}
+//     <SwiperSlide>
+//       <motion.div
+//         initial={{ opacity: 0, y: 50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//         className="w-full bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                    p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//       >
+//         {/* Text */}
+//         <div className="flex-1 max-w-md flex flex-col justify-center">
+//           <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+//             Support
+//           </span>
+//           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//             For Sponsors & Speakers
+//           </h2>
+//           <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//             Support and contribute to our mission of promoting financial literacy.
+//             Share your expertise, inspire others, and help us create a lasting impact.
+//           </p>
+//         </div>
+
+//         {/* Video */}
+//         <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//           <video
+//             className="w-full h-full object-cover"
+//             src="/images/vid3.mp4"
+//             autoPlay
+//             muted
+//             loop
+//             playsInline
+//           />
+//         </div>
+//       </motion.div>
+//     </SwiperSlide>
+//   </Swiper>
+// </div>
+
+
+//   )}
+
+
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
-export default function ThreeCsParallax() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
-  // Card 1
-  const card1Y = useTransform(scrollYProgress, [0, 0.3], ["0%", "-10%"]);
-  const card1Opacity = useTransform(scrollYProgress, [0, 0.001], [1, 1]);
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-  // Card 2
-  const card2Y = useTransform(scrollYProgress, [0.18, 0.38], ["110%", "0%"]);
-  const card2Opacity = useTransform(scrollYProgress, [0.18, 0.28], [0, 1]);
-
-  // Card 3
-  const card3Y = useTransform(scrollYProgress, [0.5, 0.7], ["110%", "0%"]);
-  const card3Opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
-
+export default function Slider() {
   return (
-    <div ref={containerRef} className="relative h-[300vh] bg-white">
-      {/* Sticky wrapper */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-
+    <div className="relative min-h-screen bg-white flex items-center justify-center px-4">
+      <Swiper
+        modules={[Pagination, Navigation, Autoplay]} // 👈 enable autoplay
+        spaceBetween={30}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        navigation
+        autoplay={{
+          delay: 4000, // 4s delay between slides
+          disableOnInteraction: false, // keep autoplay after user swipes
+        }}
+        className="w-full max-w-6xl"
+      >
         {/* Card 1 */}
-        <motion.div
-          style={{ y: card1Y, opacity: card1Opacity }}
-          className="absolute w-11/12 max-w-6xl bg-[#78cc84] text-black rounded-2xl shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between will-change-transform"
-        >
-          <div className="max-w-lg mb-6 md:mb-0">
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-              For <span className="text-orange-500">Students</span>
-            </h2>
-            <p className="text-white/90 leading-relaxed mb-6 text-sm sm:text-base">
-              Participate in our events to learn and grow your financial knowledge.
-              Gain practical insights and skills that will help you make smarter financial decisions.
-            </p>
-          </div>
+        <SwiperSlide>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="w-full bg-[#78cc84] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+                       p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            {/* Text */}
+            <div className="flex-1 max-w-lg flex flex-col justify-center">
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+                For <span className="text-orange-500">Students</span>
+              </h2>
+              <p className="text-white/90 leading-relaxed text-sm sm:text-base">
+                Participate in our events to learn and grow your financial knowledge.
+                Gain practical insights and skills that will help you make smarter financial decisions.
+              </p>
+            </div>
 
-          <div className="w-full md:w-[280px] h-64 md:h-[500px] flex items-center justify-center relative rounded-2xl overflow-hidden">
-            <video
-              src="/images/vid2.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              poster="/images/vid2-poster.jpg"
-            />
-          </div>
-        </motion.div>
+            {/* Video */}
+            <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+              <video
+                src="/images/vid2.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+        </SwiperSlide>
 
         {/* Card 2 */}
-        <motion.div
-          style={{ y: card2Y, opacity: card2Opacity }}
-          className="absolute w-11/12 max-w-5xl bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between will-change-transform"
-        >
-          <div className="max-w-md mb-6 md:mb-0">
-            <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
-              Partnership
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              For Schools & Communities
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Partner with us to bring financial education programs to your students. 
-              Together, we can create meaningful opportunities for lifelong learning.
-            </p>
-          </div>
+        <SwiperSlide>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+                       p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            {/* Text */}
+            <div className="flex-1 max-w-md flex flex-col justify-center">
+              <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+                Partnership
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                For Schools & Communities
+              </h2>
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                Partner with us to bring financial education programs to your students.
+                Together, we can create meaningful opportunities for lifelong learning.
+              </p>
+            </div>
 
-          <div className="w-full md:w-[300px] h-56 md:h-[300px] flex items-center justify-center overflow-hidden relative">
-            <video
-              className="w-full h-full object-cover"
-              src="/images/vid1.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/images/vid1-poster.jpg"
-            />
-          </div>
-        </motion.div>
+            {/* Video */}
+            <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                src="/images/vid1.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
+          </motion.div>
+        </SwiperSlide>
 
         {/* Card 3 */}
-        <motion.div
-          style={{ y: card3Y, opacity: card3Opacity }}
-          className="absolute w-11/12 max-w-5xl bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10 flex flex-col md:flex-row items-center md:items-start justify-between will-change-transform"
-        >
-          <div className="max-w-md mb-6 md:mb-0">
-            <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
-              Support
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              For Sponsors & Speakers
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Support and contribute to our mission of promoting financial literacy. 
-              Share your expertise, inspire others, and help us create a lasting impact.
-            </p>
-          </div>
+        <SwiperSlide>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="w-full bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+                       p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            {/* Text */}
+            <div className="flex-1 max-w-md flex flex-col justify-center">
+              <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+                Support
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                For Sponsors & Speakers
+              </h2>
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                Support and contribute to our mission of promoting financial literacy.
+                Share your expertise, inspire others, and help us create a lasting impact.
+              </p>
+            </div>
 
-          <div className="w-full md:w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg overflow-hidden">
-            <iframe
-              src="https://my.spline.design/colorbox3copy-g9oSODF3wwrLXjlYumN2rkbI/"
-              frameBorder="0"
-              width="100%"
-              height="100%"
-              className="rounded-full"
-            />
-          </div>
-        </motion.div>
-      </div>
+            {/* Video */}
+            <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                src="/images/vid3.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
+          </motion.div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }

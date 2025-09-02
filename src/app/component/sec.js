@@ -848,10 +848,10 @@ export default function Sec1() {
 
         {/* Powered By */}
         <div className="flex items-center gap-2 justify-end mt-3">
-          <span className="text-xs font-medium text-gray-500">POWERED BY</span>
+          {/* <span className="text-xs font-medium text-gray-500">POWERED BY</span>
           <span className="bg-green-200 text-green-900 px-2 py-1 rounded-md font-bold">
             B
-          </span>
+          </span> */}
         </div>
       </motion.div>
 
