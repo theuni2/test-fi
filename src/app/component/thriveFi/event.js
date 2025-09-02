@@ -950,11 +950,12 @@ export default function Event() {
         </p>
 
         {/* Button */}
-        <button className="mt-6 text-base md:text-lg font-semibold tracking-wide   text-black flex items-center hover:ml-1 transition-all">
-          Know More <span className="ml-2">➝</span>
-        </button>
-      </div>
-
+  <a href='/regenvest'>
+    <button className="mt-6 text-base md:text-lg font-semibold tracking-wide   text-black flex items-center hover:ml-1 transition-all">
+      Know More <span className="ml-2">➝</span>
+    </button>
+  </a>
+</div>
       {/* Right Side - Hero Image */}
       <div className="relative w-full md:w-1/2 mt-10 md:mt-0 md:pl-12 z-10">
         <Image
@@ -966,9 +967,11 @@ export default function Event() {
         />
 
         {/* Button Overlay */}
+        <a href='/regenvest#result'>
         <button className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white font-semibold px-4 py-2 sm:px-5 sm:py-3 rounded-xl text-sm md:text-base flex items-center hover:mr-1 transition-all">
           View Result <span className="ml-2">➝</span>
         </button>
+        </a>
       </div>
     </section>
   );
