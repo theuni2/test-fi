@@ -15,7 +15,7 @@ import Marquee from '../component/mar'
 
 export default function Page() {
   return (
-    <div>
+    <div className='bg-white'>
         <Nav/>
         <Slider/>
         {/* <Hero/> */}

@@ -22,7 +22,7 @@
 //     <div ref={containerRef} className="relative h-[300vh] bg-gray-900">
 //       {/* Sticky wrapper */}
 //       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        
+
 //         {/* Card 1 */}
 //         <motion.div
 //           style={{ y: card1Y, opacity: card1Opacity }}
@@ -167,7 +167,7 @@
 //           <div className="w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg">
 //             {/* <Briefcase className="w-16 h-16 text-white" /> */}
 //             <iframe src='https://my.spline.design/colorbox3copy-g9oSODF3wwrLXjlYumN2rkbI/' frameborder='0' width='100%' height='100%'></iframe>  
-              
+
 
 //           </div>
 //         </motion.div>
@@ -206,7 +206,7 @@
 //       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
 
 //         {/* Card 1 - Students */}
-    
+
 //         <motion.div
 //   style={{ y: card1Y, opacity: card1Opacity }}
 //   className="absolute w-11/12 max-w-6xl bg-[#78cc84] text-black font-[Oswald] rounded-2xl shadow-xl p-12 flex flex-col md:flex-row items-center justify-between"
@@ -911,43 +911,359 @@
 //   )}
 
 
+// "use client";
+
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination, Navigation, Autoplay } from "swiper/modules";
+// import { motion } from "framer-motion";
+
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+// export default function Slider() {
+//   return (
+//     <div className="relative min-h-screen bg-white flex items-center justify-center px-4 py-4">
+//       <Swiper
+//         modules={[Pagination, Navigation, Autoplay]} // 👈 enable autoplay
+//         spaceBetween={30}
+//         slidesPerView={1}
+//         pagination={{ clickable: true }}
+//         navigation
+//         autoplay={{
+//           delay: 4000, // 4s delay between slides
+//           disableOnInteraction: false, // keep autoplay after user swipes
+//         }}
+//         className="w-full max-w-6xl"
+//       >
+//         {/* Card 1 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-[#78cc84] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                        p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//           >
+//             {/* Text */}
+//             <div className="flex-1 max-w-lg flex flex-col justify-center">
+//               <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+//                 For <span className="text-orange-500">Students</span>
+//               </h2>
+//               <p className="text-white/90 leading-relaxed text-sm sm:text-base">
+//                 Participate in our events to learn and grow your financial knowledge.
+//                 Gain practical insights and skills that will help you make smarter financial decisions.
+//               </p>
+//             </div>
+
+//             {/* Video */}
+//             <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//               <video
+//                 src="/images/vid2.mp4"
+//                 autoPlay
+//                 loop
+//                 muted
+//                 playsInline
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+
+//         {/* Card 2 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                        p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//           >
+//             {/* Text */}
+//             <div className="flex-1 max-w-md flex flex-col justify-center">
+//               <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+//                 Partnership
+//               </span>
+//               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//                 For Schools & Communities
+//               </h2>
+//               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//                 Partner with us to bring financial education programs to your students.
+//                 Together, we can create meaningful opportunities for lifelong learning.
+//               </p>
+//             </div>
+
+//             {/* Video */}
+//             <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//               <video
+//                 className="w-full h-full object-cover"
+//                 src="/images/vid1.mp4"
+//                 autoPlay
+//                 muted
+//                 loop
+//                 playsInline
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+
+//         {/* Card 3 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                        p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//           >
+//             {/* Text */}
+//             <div className="flex-1 max-w-md flex flex-col justify-center">
+//               <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+//                 Support
+//               </span>
+//               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+//                 For Sponsors & Speakers
+//               </h2>
+//               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+//                 Support and contribute to our mission of promoting financial literacy.
+//                 Share your expertise, inspire others, and help us create a lasting impact.
+//               </p>
+//             </div>
+
+//             {/* Video */}
+//             <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+//               <video
+//                 className="w-full h-full object-cover"
+//                 src="/images/vid3.mp4"
+//                 autoPlay
+//                 muted
+//                 loop
+//                 playsInline
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+//       </Swiper>
+//     </div>
+//   );
+// }
+
+
+// "use client";
+
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination, Navigation, Autoplay } from "swiper/modules";
+// import { motion } from "framer-motion";
+
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+// export default function ThreeCsSlider() {
+//   return (
+//     <div className="relative min-h-screen bg-white flex items-center justify-center px-4 my-4">
+//          <motion.div
+//               initial={{ x: -50, y: 0, opacity: 0.3 }}
+//               animate={{ y: [0, 20, 0] }}
+//               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+//               className="absolute top-9 left-[-40px] w-64 sm:w-72 opacity-30"
+//             ></motion.div>
+//       <Swiper
+//         modules={[Pagination, Navigation, Autoplay]}
+//         spaceBetween={20}
+//         slidesPerView={1}
+//         pagination={{ clickable: true }}
+//         navigation
+//         autoplay={{
+//           delay: 4000,
+//           disableOnInteraction: false,
+//         }}
+//         breakpoints={{
+//           640: { slidesPerView: 1 }, // mobile
+//           768: { slidesPerView: 1 }, // tablet
+//           1024: { slidesPerView: 1 }, // desktop
+//         }}
+//         className="w-full max-w-6xl"
+//       >
+//         {/* Card 1 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-[#78cc84] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                        p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//           >
+//             {/* Text */}
+//             <div className="flex-1 max-w-lg text-center md:text-left">
+//               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 text-white">
+//                 For <span className="text-orange-500">Students</span>
+//               </h2>
+//               <p className="text-white/90 leading-relaxed text-sm sm:text-base">
+//                 Participate in our events to learn and grow your financial knowledge.
+//                 Gain practical insights and skills that will help you make smarter financial decisions.
+//               </p>
+//             </div>
+
+//             {/* Video */}
+//             <div className="flex-1 w-full max-w-md aspect-video rounded-2xl overflow-hidden">
+//               <video
+//                 src="/images/vid2.mp4"
+//                 autoPlay
+//                 loop
+//                 muted
+//                 playsInline
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+
+//         {/* Card 2 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                        p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//           >
+//             {/* Text */}
+//             <div className="flex-1 max-w-lg text-center md:text-left">
+//               <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
+//                 Partnership
+//               </span>
+//               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+//                 For Schools & Communities
+//               </h2>
+//               <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
+//                 Partner with us to bring financial education programs to your students.
+//                 Together, we can create meaningful opportunities for lifelong learning.
+//               </p>
+//             </div>
+
+//             {/* Video */}
+//             <div className="flex-1 w-full max-w-md aspect-video rounded-2xl overflow-hidden">
+//               <video
+//                 src="/images/vid1.mp4"
+//                 autoPlay
+//                 loop
+//                 muted
+//                 playsInline
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+
+//         {/* Card 3 */}
+//         <SwiperSlide>
+//           <motion.div
+//             initial={{ opacity: 0, y: 50 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             className="w-full bg-white/90 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
+//                        p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+//           >
+//             {/* Text */}
+//             <div className="flex-1 max-w-lg text-center md:text-left">
+//               <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
+//                 Support
+//               </span>
+//               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+//                 For Sponsors & Speakers
+//               </h2>
+//               <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
+//                 Support and contribute to our mission of promoting financial literacy.
+//                 Share your expertise, inspire others, and help us create a lasting impact.
+//               </p>
+//             </div>
+
+//             {/* Video */}
+//             <div className="flex-1 w-full max-w-md aspect-video rounded-2xl overflow-hidden">
+//               <video
+//                 src="/images/vid3.mp4"
+//                 autoPlay
+//                 loop
+//                 muted
+//                 playsInline
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//           </motion.div>
+//         </SwiperSlide>
+//       </Swiper>
+//     </div>
+//   );
+// }
+
+
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export default function Slider() {
+export default function ThreeCsSlider() {
   return (
-    <div className="relative min-h-screen bg-white flex items-center justify-center px-4">
+    <div className="relative min-h-screen bg-white flex items-center justify-center px-4 my-4 overflow-hidden">
+      {/* Floating Blobs */}
+      <motion.div
+        initial={{ x: -50, y: -50, opacity: 0.4 }}
+        animate={{ x: [0, 30, -30, 0], y: [0, 20, -20, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-10 left-1/3 w-24 h-24 opacity-30 z-0"
+      >
+        <Image src="/blob.png" alt="blob" width={400} height={200} className="w-full h-full" />
+      </motion.div>
+
+      <motion.div
+        initial={{ x: 50, y: 0, opacity: 0.4 }}
+        animate={{ x: [0, -40, 40, 0], y: [0, 30, -30, 0] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-20 right-10 w-20 h-20 opacity-20 z-0"
+      >
+        <Image src="/blob.png" alt="blob" width={180} height={180} className="w-full h-full" />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0.3 }}
+        animate={{ scale: [1, 1.2, 1], rotate: [0, 20, -20, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-[-40px] w-28 h-28 opacity-25 z-0"
+      >
+        <Image src="/blob.png" alt="blob" width={160} height={160} className="w-full h-full" />
+      </motion.div>
+
+      {/* Swiper */}
       <Swiper
-        modules={[Pagination, Navigation, Autoplay]} // 👈 enable autoplay
-        spaceBetween={30}
+        modules={[Pagination, Navigation, Autoplay]}
+        spaceBetween={20}
         slidesPerView={1}
         pagination={{ clickable: true }}
         navigation
         autoplay={{
-          delay: 4000, // 4s delay between slides
-          disableOnInteraction: false, // keep autoplay after user swipes
+          delay: 4000,
+          disableOnInteraction: false,
         }}
-        className="w-full max-w-6xl"
+        className="w-full max-w-6xl relative z-10"
       >
-        {/* Card 1 */}
+        {/* Slide 1 */}
         <SwiperSlide>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full bg-[#78cc84] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
-                       p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+            className="w-full bg-[#78cc84] rounded-2xl border border-gray-200 shadow-xl p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
           >
             {/* Text */}
-            <div className="flex-1 max-w-lg flex flex-col justify-center">
-              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+            <div className="flex-1 max-w-lg text-center md:text-left">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 text-white">
                 For <span className="text-orange-500">Students</span>
               </h2>
               <p className="text-white/90 leading-relaxed text-sm sm:text-base">
@@ -957,7 +1273,7 @@ export default function Slider() {
             </div>
 
             {/* Video */}
-            <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+            <div className="flex-1 w-full max-w-md aspect-video rounded-2xl overflow-hidden">
               <video
                 src="/images/vid2.mp4"
                 autoPlay
@@ -970,75 +1286,73 @@ export default function Slider() {
           </motion.div>
         </SwiperSlide>
 
-        {/* Card 2 */}
+        {/* Slide 2 */}
         <SwiperSlide>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full bg-[#75b3ce] backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
-                       p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+            className="w-full bg-[#75b3ce] rounded-2xl border border-gray-200 shadow-xl p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
           >
             {/* Text */}
-            <div className="flex-1 max-w-md flex flex-col justify-center">
+            <div className="flex-1 max-w-lg text-center md:text-left">
               <span className="text-xs sm:text-sm uppercase tracking-widest text-gray-100 font-semibold">
                 Partnership
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 For Schools & Communities
               </h2>
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
                 Partner with us to bring financial education programs to your students.
                 Together, we can create meaningful opportunities for lifelong learning.
               </p>
             </div>
 
             {/* Video */}
-            <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+            <div className="flex-1 w-full max-w-md aspect-video rounded-2xl overflow-hidden">
               <video
-                className="w-full h-full object-cover"
                 src="/images/vid1.mp4"
                 autoPlay
-                muted
                 loop
+                muted
                 playsInline
+                className="w-full h-full object-cover"
               />
             </div>
           </motion.div>
         </SwiperSlide>
 
-        {/* Card 3 */}
+        {/* Slide 3 */}
         <SwiperSlide>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl 
-                       p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+            className="w-full bg-white/90 rounded-2xl border border-gray-200 shadow-xl p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
           >
             {/* Text */}
-            <div className="flex-1 max-w-md flex flex-col justify-center">
+            <div className="flex-1 max-w-lg text-center md:text-left">
               <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-500 font-semibold">
                 Support
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 For Sponsors & Speakers
               </h2>
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
                 Support and contribute to our mission of promoting financial literacy.
                 Share your expertise, inspire others, and help us create a lasting impact.
               </p>
             </div>
 
             {/* Video */}
-            <div className="flex-1 w-full md:w-[300px] h-56 md:h-[400px] flex items-center justify-center rounded-2xl overflow-hidden">
+            <div className="flex-1 w-full max-w-md aspect-video rounded-2xl overflow-hidden">
               <video
-                className="w-full h-full object-cover"
                 src="/images/vid3.mp4"
                 autoPlay
-                muted
                 loop
+                muted
                 playsInline
+                className="w-full h-full object-cover"
               />
             </div>
           </motion.div>
