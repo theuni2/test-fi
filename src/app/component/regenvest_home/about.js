@@ -151,7 +151,7 @@ export default function Bout() {
               ReGenVest Challenge • 2025
             </span>
 
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent">
+            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight font-[oswald] bg-black bg-clip-text text-transparent">
               ReGenVest Challenge 2025: Shaping Tomorrow’s Financial Thinkers
             </h2>
 

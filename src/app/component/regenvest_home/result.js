@@ -15,12 +15,19 @@ export default function ResultsAndWinners() {
             className="inline-flex items-center px-6 py-3 rounded-full text-lg bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white font-semibold shadow hover:brightness-105 transition"
             aria-label="View Results"
           >
+          {/* <a
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center px-6 py-3 rounded-full text-lg bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white font-semibold shadow hover:brightness-105 transition"
+            aria-label="View Results"
+          > */}
             Results Announced
           </a>
         </div>
 
         {/* Winners Section */}
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
+        <h2 className="text-3xl font-bold text-center font-[oswald] text-gray-800 mb-10">
           ReGenVest 2025 — Winners
         </h2>
 

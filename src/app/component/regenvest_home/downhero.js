@@ -49,8 +49,12 @@ export default function Downhero() {
       >
         <motion.h2
           variants={item}
-          className="text-3xl md:text-4xl font-extrabold leading-tight bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent max-w-4xl"
+          className="text-3xl md:text-4xl font-extrabold leading-tight bg-black font-[oswald] bg-clip-text text-transparent max-w-4xl"
         >
+        {/* <motion.h2
+          variants={item}
+          className="text-3xl md:text-4xl font-extrabold leading-tight bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent max-w-4xl"
+        > */}
           Empowering Future Financial Leaders — through expert insights, student voices, and impactful partnerships like the ReGenVest Challenge.
         </motion.h2>
 

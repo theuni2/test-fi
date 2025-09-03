@@ -58,10 +58,16 @@ export default function Sponser() {
 
         <motion.h2
           variants={item}
-          className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-extrabold bg-black font-[oswald] bg-clip-text text-transparent"
         >
           Proudly Sponsored By WellFund
         </motion.h2>
+        {/* <motion.h2
+          variants={item}
+          className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+        >
+          Proudly Sponsored By WellFund
+        </motion.h2> */}
 
         <motion.p
           variants={item}

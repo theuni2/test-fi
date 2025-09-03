@@ -1146,7 +1146,7 @@ export default function Sec1() {
       </motion.div>
 
       {/* Left Content */}
-      <motion.div
+      {/* <motion.div
         className="max-w-xl relative z-10 text-center md:text-left"
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -1156,14 +1156,71 @@ export default function Sec1() {
           Empowering Students <br /> Through Financial Education
         </h1>
         <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-medium max-w-md mx-auto md:mx-0">
-          At the heart of ThriveFi are the 3 Cs
+          {/* At the heart of ThriveFi are the 3 Cs
           <span className="text-purple-600 font-bold"> Conference</span>,
           <span className="text-purple-600 font-bold"> Competition</span>, and
           <span className="text-purple-600 font-bold"> Consulting</span>. These
           pillars drive our mission to spark learning, foster dialogue, and mentor
-          students in their financial journey.
+          students in their financial journey. */}
+
+          {/* At the heart of ThriveFi are the 3 Cs: Conference, Competition, and Consulting. Think of them as the Avengers of financial education, different powers working together toward one mission. Together, they spark curiosity, inspire bold discussions, and guide tomorrow’s leaders on their money-smart journeys.
+
+But wait, this isn’t just another school event. This is international. Your students won’t only be competing against their classmates; they will face bright minds from different countries, time zones, and snack preferences.
+
+<span className="text-purple-600 font-bold"> Conference: Where ideas clash, insights emerge, and students sound much smarter than most adults at family dinners. </span> 
+<span className="text-purple-600 font-bold">Competition: Where teams channel their inner Shark Tank energy—without the TV drama—to solve real-world financial problems.  </span>
+<span className="text-purple-600 font-bold">Consulting: Where students get to act as advisors—because why should adults have all the fun?</span>
+
+So, principals, gather your brightest students. Rally your squads. Whether you’re from Dubai, Delhi, Singapore, or São Paulo, this is your chance to think globally, compete boldly, and consult like a pro.
+
+Sign up, show up, and maybe go down in ThriveFi history as the team that conquered the 3 Cs.
         </p>
-      </motion.div>
+      </motion.div> */} 
+
+      {/* Left Content */}
+<motion.div
+  className="max-w-xl relative z-10 text-center md:text-left"
+  initial={{ opacity: 0, x: -50 }}
+  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+  transition={{ duration: 0.8 }}
+>
+  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 font-[Oswald] mb-6">
+    Empowering Students <br /> Through Financial Education
+  </h1>
+
+  <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-medium mb-4">
+    At the heart of <span className="font-bold text-purple-600">ThriveFi</span> are the
+    <span className="font-bold text-purple-600"> 3 Cs</span>: Conference, Competition, and Consulting.  
+    Think of them as the Avengers of financial education—different powers united for one mission.
+  </p>
+
+  <ul className="text-gray-700 text-sm sm:text-base lg:text-lg font-medium list-disc pl-5 space-y-2 mb-6">
+    <li>
+      <span className="font-bold text-purple-600">Conference:</span> Where ideas clash, insights emerge, and students sound smarter than most adults at family dinners.
+    </li>
+    <li>
+      <span className="font-bold text-purple-600">Competition:</span> Teams channel their inner Shark Tank energy—without the TV drama—to solve real-world financial problems.
+    </li>
+    <li>
+      <span className="font-bold text-purple-600">Consulting:</span> Students step up as advisors—because why should adults have all the fun?
+    </li>
+  </ul>
+
+  <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-medium mb-4">
+    But wait—this isn’t just another school event. This is <span className="font-bold">international</span>. 
+    Your students won’t only compete with classmates, but with bright minds from across countries, cultures, and time zones.
+  </p>
+
+  <p className="text-gray-900 font-semibold text-base sm:text-lg lg:text-xl">
+    Principals, gather your brightest students. Rally your squads.  
+    Whether you’re from Dubai, Delhi, Singapore, or São Paulo—this is your chance to think globally, compete boldly, and consult like a pro.
+  </p>
+
+  <p className="mt-4 text-purple-700 font-bold text-base sm:text-lg">
+    Sign up. Show up. And maybe go down in ThriveFi history as the team that conquered the 3 Cs.
+  </p>
+</motion.div>
+
 
       {/* Right Content */}
       <motion.div

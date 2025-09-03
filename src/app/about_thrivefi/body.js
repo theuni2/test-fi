@@ -75,6 +75,10 @@ export default function About() {
 
   return (
     <div className="bg-gray-50 min-h-screen relative overflow-hidden">
+      <Nav />
+      <h1 className="text-4xl md:text-5xl text-center font-extrabold bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent leading-snug font-[Oswald]">
+    About ThriveFi
+  </h1>
       {/* Enhanced Floating Blobs */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {blobs.map((blob, index) => (
@@ -155,19 +159,82 @@ export default function About() {
         ))}
       </div>
 
-      <Nav />
+      
 
       {/* Hero Section */}
       <section className="relative flex flex-col md:flex-row items-center justify-between w-full bg-white/90 backdrop-blur-sm px-6 md:px-12 py-16 z-10">
         {/* Left Content */}
-        <div className="flex flex-col justify-center w-full md:w-1/2 relative z-10 text-center md:text-left">
+        {/* <div className="flex flex-col justify-center w-full md:w-1/2 relative z-10 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent leading-snug font-[Oswald]">
             About ThriveFi
           </h1>
           <p className="mt-6 text-lg text-gray-700 leading-relaxed max-w-lg mx-auto md:mx-0">
-            ThriveFi empowers students with accessible financial education. Founded by high school student Anvay Arora, we bring the <span className="font-bold text-purple-600">3 Cs</span> — Conference, Competition, and Consulting — to life, shaping the next generation of financial thinkers.
+          
+          
+        ThriveFi isn’t just another after-school program, it’s a movement. Founded by a high school student, Anvay Arora, ThriveFi shows that financial education can be fun and engaging rather than just boring spreadsheets or complicated terms. It focuses on making money skills accessible and exciting for everyone.
+
+ThriveFi has three key elements, which are not about report card grades but something much cooler:
+
+- Conference: Students share ideas that are more exciting than stock market rumors. They learn from experts who make finance feel like storytime.
+- Competition: Classrooms become boardrooms where students compete using creativity and strategy, fueled by maybe a bit of caffeine.
+- Consulting: Students don’t just learn about finance—they practice it. They tackle real problems like mini Wall Street experts.
+
+The result? A new generation of financial thinkers who are bold, globally aware, and ready to change how the world views money.
+
+So, principals, teachers, and students—here’s your invitation. Whether you’re in Singapore, San Francisco, or Surat, ThriveFi is your chance to learn, compete, and excel.
+         
+         
           </p>
-        </div>
+        </div> */}
+
+
+{/* Left Content */}
+<div className="flex flex-col justify-center w-full md:w-1/2 relative z-10 text-center md:text-left">
+  {/* Heading */}
+  
+
+  {/* Intro */}
+  <p className="mt-6 text-lg text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
+    ThriveFi isn’t just another after-school program—it’s a movement.
+    Founded by <span className="font-semibold text-gray-900">Anvay Arora</span>,
+    ThriveFi shows that financial education can be fun and engaging, not
+    just boring spreadsheets or confusing terms.
+  </p>
+
+  {/* Key Elements */}
+  <div className="mt-8 space-y-6">
+    <div className="bg-white/70 backdrop-blur-sm p-5 rounded-xl shadow-sm hover:shadow-md transition">
+      <h3 className="font-semibold text-indigo-700">📢 Conference</h3>
+      <p className="text-gray-600 text-base mt-1">
+        Students share bold ideas and learn from experts who make finance
+        feel like storytime.
+      </p>
+    </div>
+    <div className="bg-white/70 backdrop-blur-sm p-5 rounded-xl shadow-sm hover:shadow-md transition">
+      <h3 className="font-semibold text-purple-700">🏆 Competition</h3>
+      <p className="text-gray-600 text-base mt-1">
+        Classrooms turn into boardrooms where creativity and strategy take
+        the spotlight.
+      </p>
+    </div>
+    <div className="bg-white/70 backdrop-blur-sm p-5 rounded-xl shadow-sm hover:shadow-md transition">
+      <h3 className="font-semibold text-fuchsia-700">🤝 Consulting</h3>
+      <p className="text-gray-600 text-base mt-1">
+        Students tackle real problems hands-on, gaining practical finance
+        experience like mini Wall Street experts.
+      </p>
+    </div>
+  </div>
+
+  {/* Closing */}
+  <p className="mt-10 text-lg text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
+   The result? A new generation of financial thinkers who are bold, globally aware, and ready to change how the world views money.
+
+So, principals, teachers, and students—here’s your invitation. Whether you’re in Singapore, San Francisco, or Surat, ThriveFi is your chance to 
+    <span className="font-semibold text-gray-900"> learn, compete, and excel.</span>
+  </p>
+</div>
+
 
         {/* Right Content */}
         <div className="relative w-full md:w-1/2 mt-10 md:mt-0 md:pl-12 z-10">
@@ -187,8 +254,14 @@ export default function About() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-black font-[oswald] bg-clip-text text-transparent"
         >
+        {/* <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+        > */}
           What We Do
         </motion.h2>
 
@@ -226,8 +299,14 @@ export default function About() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-black font-[oswald] bg-clip-text text-transparent"
         >
+        {/* <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent"
+        > */}
           Our Vision
         </motion.h2>
 
