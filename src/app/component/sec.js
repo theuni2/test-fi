@@ -1217,7 +1217,7 @@ Sign up, show up, and maybe go down in ThriveFi history as the team that conquer
   </p>
 
   <p className="mt-4 text-purple-700 font-bold text-base sm:text-lg">
-    Sign up. Show up. And maybe go down in ThriveFi history as the team that conquered the 3 Cs.
+   Sign up. Show up. And maybe go down in ThriveFi history as the person who conquered the world of finance!
   </p>
 </motion.div>
 

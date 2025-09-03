@@ -230,8 +230,8 @@ So, principals, teachers, and students—here’s your invitation. Whether you�
   <p className="mt-10 text-lg text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0">
    The result? A new generation of financial thinkers who are bold, globally aware, and ready to change how the world views money.
 
-So, principals, teachers, and students—here’s your invitation. Whether you’re in Singapore, San Francisco, or Surat, ThriveFi is your chance to 
-    <span className="font-semibold text-gray-900"> learn, compete, and excel.</span>
+So, principals, teachers, and students—here’s your invitation.<span className="font-semibold text-gray-900"> Sign-up and Show Up like the Wolf of Wallstreet.
+     </span>
   </p>
 </div>
 
